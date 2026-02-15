@@ -137,18 +137,36 @@
             padding: 60px 20px;
         }
 
-        .car-image {
-            max-width: 600px;
-            width: 100%;
+        .car-gallery {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .car-gallery img {
+            width: calc(50% - 10px);
+            max-width: 380px;
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            object-fit: cover;
+            aspect-ratio: 3/4;
         }
 
         .car-caption {
-            margin-top: 16px;
+            margin-top: 20px;
             font-size: 1.05rem;
             color: #666;
             font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .car-gallery img {
+                width: 100%;
+                max-width: 320px;
+            }
         }
 
         /* About */
@@ -374,7 +392,10 @@
     <!-- Car -->
     <section class="car-section">
         <div class="container fade-in">
-            <img src="car.jpg" alt="רכב הלימוד - יונדאי קונה היברידי" class="car-image">
+            <div class="car-gallery">
+                <img src="car1.jpeg" alt="רכב הלימוד - יונדאי קונה היברידי">
+                <img src="car2.png" alt="רכב הלימוד - יונדאי קונה היברידי מהצד">
+            </div>
             <p class="car-caption">רכב הלימוד — יונדאי קונה היברידי</p>
         </div>
     </section>
